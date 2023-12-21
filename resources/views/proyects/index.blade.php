@@ -72,12 +72,14 @@
                                 <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
+                                    @if ($proyecto->user_id == auth()->user()->id)
                                     <a class="dropdown-item" href="{{ url('/proyectsedit/'.$proyecto->id) }}"
                                         ><i class="bx bx-edit-alt me-1"></i> Editar</a
                                     >
                                     <a class="dropdown-item" href="{{ url('/proyectsdestroy/'.$proyecto->id) }}"
                                         ><i class="bx bx-trash me-1"></i> Eliminar</a
                                     >
+                                    @endif
                                     <a class="dropdown-item" href="{{ url('/taskindex/'.$proyecto->id) }}"
                                         ><i class="bx bx-task me-1"></i> Tareas</a
                                     >

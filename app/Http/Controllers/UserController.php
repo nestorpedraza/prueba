@@ -95,7 +95,6 @@ class UserController extends Controller
 
         $usuario = User::findOrFail($id);
 
-        
         if ($request->hasFile('imagen')) {
             try {
                 // Elimina la imagen anterior si existe

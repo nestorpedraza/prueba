@@ -4,10 +4,11 @@
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tareas /</span> Lista</h4>
         <!-- Basic Bootstrap Table -->
         <div class="demo-inline-spacing">
-            <a type="button" href="{{route('proyects.create')}}" class="btn btn-primary">Nuevo Tarea</a>
+            <a type="button" href="{{route('proyects.index')}}" class="btn btn-secondary">Regresar</a>
+            <a type="button" href="{{ url('/taskcreate/'.$proyecto->id) }}" class="btn btn-primary">Nueva Tarea</a>
         </div>
         <div class="card">
-            <h5 class="card-header">Proyecto: {{$proyecto->name}}</h5>
+            <h5 class="card-header">Proyecto: {{$proyecto->titulo}}</h5>
             
             @if(session('status'))
                 <div class="alert alert-success" role="alert">{{ session('status') }}</div>
@@ -65,19 +66,26 @@
                                 </li>
                             </ul>
                             </td>
-                            <td><span class="badge bg-label-primary me-1">Active</span></td>
+                            <td><span class="badge bg-label-primary me-1">{{$task->statu->estado}}</span></td>
                             <td>
                             <div class="dropdown">
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                 <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
+                                    @if ($task->user_id == auth()->user()->id)
+                                    <a class="dropdown-item" href="{{ url('/taskedit/'.$task->id) }}"
+                                        ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                                    >
+                                    <a class="dropdown-item" href="{{ url('/taskdestroy/'.$task->id) }}"
+                                        ><i class="bx bx-trash me-1"></i> Eliminar</a
+                                    >
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ url('/taskshow/'.$task->id) }}"
                                         ><i class="bx bx-task me-1"></i> Ver Detalle</a
                                     >
-                                    <a class="dropdown-item" href="{{ url('/proyectsdestroy/'.$task->id) }}"
-                                        ><i class="bx bx-trash me-1"></i> Delete</a
-                                    >
+                                    
                                 </div>
                             </div>
                             </td>

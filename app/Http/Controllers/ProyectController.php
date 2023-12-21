@@ -48,8 +48,8 @@ class ProyectController extends Controller
     public function edit($id)
     {
        //$proyecto = Proyect::findOrFail($id);
-        $id = Auth::user()->id;
-        $proyecto = Proyect::where('user_id', $id)->findOrFail($id);
+        $user_id= Auth::user()->id;
+        $proyecto = Proyect::where('user_id', $user_id)->findOrFail($id);
         return view('proyects.edit', compact('proyecto'));
     }
 

@@ -96,14 +96,15 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tareas/</span> Editar</h4>
+            <li  @if(Route::currentRouteName() == "dashboard.index") class="menu-item active" @else class="menu-item"  @endif>
               <a href="{{route('dashboard.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
-            <li class="menu-item">
+            <li @if(Route::currentRouteName() == "proyects.index") class="menu-item active" @else class="menu-item"  @endif>
               <a href="{{route('proyects.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Proyectos">Proyectos</div>
