@@ -1,6 +1,6 @@
 
 
-![image](https://github.com/nestorpedraza/prueba/assets/45646808/88a7f6da-9a6c-42f1-9844-77151071192d)
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
@@ -62,9 +62,9 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Diagrama Entidad Relacion
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![ER_diagrama](https://github.com/nestorpedraza/prueba/assets/45646808/8d72f9e1-aa85-4e69-96d4-86eefae268e4)
 
 ## Diccionario de datos
 
