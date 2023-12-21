@@ -3,15 +3,19 @@
 ## Sistema TaskManamenget
 
 Se utiliza  la version de Laravel 10: https://laravel.com/docs/10.x/releases
+<br>
 Plantilla utilizada sneat-1.0.0: https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/
 
 ## Instalacion 
 
-correr en consola los siguientes comandos: 
-
+Correr en consola los siguientes comandos: 
+<br>
 npm install. 
+<br>
 php artisan migrate --seed
+<br>
 php artisan serve 
+<br>
 
 ## Diagrama Entidad Relacion
 
